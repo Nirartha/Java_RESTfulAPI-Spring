@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "bdb0977f-b3c7-4654-a9d7-1bb40576a790",
+		"name": "Java_RESTfulAPI-Spring",
+		"description": "There are three API for Java_RESTfulAPI-Spring project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "memberInfo API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/memberApi/v1/memberInfo?account=Dennis&password=a1234567b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"memberApi",
+						"v1",
+						"memberInfo"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "Dennis"
+						},
+						{
+							"key": "password",
+							"value": "a1234567b"
+						}
+					]
+				},
+				"description": "memberInfo API\nhttp://localhost:8080/memberApi/v1/memberInfo?account={account}&password={password}"
+			},
+			"response": []
+		},
+		{
+			"name": "checkPassword API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/memberApi/v1/checkPassword/a123:67bX",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"memberApi",
+						"v1",
+						"checkPassword",
+						"a123:67bX"
+					]
+				},
+				"description": "checkPassword API\nhttp://localhost:8080/memberApi/v1/checkPassword/a123:67bX"
+			},
+			"response": []
+		},
+		{
+			"name": "introduction API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/memberApi/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"memberApi",
+						"v1",
+						""
+					]
+				},
+				"description": "introduction API\nhttp://localhost:8080/memberApi/v1/"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
